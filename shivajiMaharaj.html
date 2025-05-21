@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivaji Maharaj Idol | ShopEasy</title>
+    <meta name="description" content="Product description for SEO">
+    <!-- Same assets as your original code -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation (Same across all pages) -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ShopEasy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Home Decor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Deals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person"></i> Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person-plus"></i> Sign Up</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#">
+                            <i class="bi bi-cart"></i> Cart
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section (Customize this for each product) -->
+    <div class="container my-5">
+        <div class="product-container row">
+            <!-- Product Images -->
+            <div class="col-md-6">
+                <div class="d-flex mb-3">
+                    <div class="me-3 d-flex flex-column gap-3">
+                        <img src="https://shastrafy.com/wp-content/uploads/2023/12/13.png" width="80" height="80" loading="lazy"
+                            class="product-img-thumbnail img-thumbnail" onclick="changeImage(this.src)"
+                            alt="Product alternate view 1">
+                        <img src="https://shastrafy.com/wp-content/uploads/2023/12/4-2.jpg.webp" width="80" height="80" loading="lazy"
+                            class="product-img-thumbnail img-thumbnail" onclick="changeImage(this.src)"
+                            alt="Product alternate view 2">
+                        <img src="https://shastrafy.com/wp-content/uploads/2023/12/7-2.jpg.webp" width="80" height="80" loading="lazy"
+                            class="product-img-thumbnail img-thumbnail" onclick="changeImage(this.src)"
+                            alt="Product alternate view 3">
+                    </div>
+                    <img id="mainImage" src="https://shastrafy.com/wp-content/uploads/2023/12/13.png" loading="eager" class="img-fluid rounded"
+                        alt="Main product image">
+                </div>
+            </div>
+
+            <!-- Product Details -->
+            <div class="col-md-6">
+                <h1 class="h2 mb-3">Shivaji Maharaj Idol - Black 10 inch Height</h1>
+                <p class="text-success h4">₹3,150</p>
+                <p class="text-muted mb-4">Inclusive of all taxes</p>
+
+                <form id="productForm">
+                    <!-- Customizable Options (Remove if not needed) -->
+                    <div class="mb-3">
+                        <label for="color" class="form-label">Color</label>
+                        <select class="form-select" id="color" required>
+                            <option value="">Select color</option>
+                            <option value="red">White</option>
+                            <option value="black">Black</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ram" class="form-label">Material</label>
+                        <select class="form-select" id="ram" required>
+                            <option value="">Select Material</option>
+                            <option value="4">Ceramic</option>
+                            <option value="8">Resin Fiber</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="storage" class="form-label">Customize</label>
+                        <select class="form-select" id="storage" required onchange="showSpecs()">
+                            <option value="">Select Customize</option>
+                            <option value="64">Crafted</option>
+                            <option value="128">Machine Crafted</option>
+                        </select>
+                    </div>
+
+                    <!-- Key Specifications -->
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">Resin Fiber Idol</li>
+                        <li class="list-group-item">For Gifting / Home decor</li>
+                        <li class="list-group-item">Size 10 inch Height</li>
+                    </ul>
+
+                    <!-- Dynamic Spec Sheet (Shows when storage is selected) -->
+                    <div id="specSheet" class="border p-3 rounded bg-light" style="display: none;">
+                        <h5>Highlights</h5>
+                        <ul>
+                            <li><strong>Dimensions:</strong> Length 9 inch-Width 8 inch-Height 10 inch</li>
+                            <li><strong>Product SKU:</strong> SPC-SM-03</li>
+                            <li><strong>Color:</strong> Black Finish</li>
+                            <li><strong>Care:</strong> Washable, Deco Colour used</li>
+                            <li><strong>Warranty:</strong> Warranty details</li>
+                        </ul>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="d-flex gap-3 mt-3">
+                        <button type="button" class="btn btn-warning add-to-cart">Add to Cart</button>
+                        <button type="button" class="btn btn-danger buy-now">Buy Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Description Section -->
+    <div class="container mb-5">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Product Description</h3>
+                <div class="card-text">
+                    <p>100% Original Products<br>Pay on delivery might be available<br>
+                        Easy 7 days returns and exchanges</p>
+                    <ul>
+                        <li>Coupon Discount: 35% off upto Rs. 350 (check cart for final savings)</li>
+                        <li>Applicable on: Orders above Rs. 1000 (only on first purchase)</li>
+                        <li>Coupon code: SAVE35</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Billing Modal -->
+    <div class="modal fade" id="billingModal" tabindex="-1" aria-labelledby="billingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="billingModalLabel">Complete Your Purchase</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Order Summary</h6>
+                            <div id="orderSummary" class="mb-3"></div>
+                            <hr>
+                            <div class="d-flex justify-content-between fw-bold">
+                                <span>Total:</span>
+                                <span id="orderTotal">₹0.00</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <form id="billingForm">
+                                <h6>Shipping Information</h6>
+                                <div class="mb-3">
+                                    <label for="fullName" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="fullName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Shipping Address</label>
+                                    <textarea class="form-control" id="address" rows="3" required></textarea>
+                                </div>
+
+                                <h6 class="mt-4">Payment Information</h6>
+                                <div class="mb-3">
+                                    <label for="cardNumber" class="form-label">Card Number</label>
+                                    <input type="text" class="form-control" id="cardNumber"
+                                        placeholder="1234 5678 9012 3456" required>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label for="expiryDate" class="form-label">Expiry Date</label>
+                                        <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY"
+                                            required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary w-100 mt-2">Place Order</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>ShopEasy</h5>
+                    <p>Your one-stop destination for all shopping needs. Quality products at affordable prices.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="Electronics.html" class="text-white">Electronics</a></li>
+                        <li><a href="#" class="text-white">Clothing</a></li>
+                        <li><a href="#" class="text-white">Home Decor</a></li>
+                        <li><a href="#" class="text-white">Deals</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                        <li><a href="#" class="text-white">Shipping</a></li>
+                        <li><a href="#" class="text-white">Returns</a></li>
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to get updates on new products and special offers</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 ShopEasy. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts (Same across all pages) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Product-specific scripts
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+        }
+
+        function showSpecs() {
+            const storage = document.getElementById('storage')?.value;
+            const specSheet = document.getElementById('specSheet');
+            if (storage) {
+                specSheet.style.display = 'block';
+            } else {
+                specSheet.style.display = 'none';
+            }
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            showSpecs();
+            const storageSelect = document.getElementById('storage');
+            if (storageSelect) {
+                storageSelect.addEventListener('change', showSpecs);
+            }
+        });
+    </script>
+</body>
+
+</html>

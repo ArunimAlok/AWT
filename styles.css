@@ -1,0 +1,312 @@
+/* Global Variables */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #f59e0b;
+    --light-bg: #f8fafc;
+    --dark-text: #1e293b;
+    --shadow-default: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    --samsung-blue: #de3d3d;
+    --primary-gradient: linear-gradient(to right, #f0f0f0, #ffffff);
+  }
+  
+  /* Base Styles */
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: white;
+    box-shadow: var(--shadow-default);
+    padding: 0.8rem 1rem;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
+  
+  .btn-warning {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #000;
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800;
+    border-color: #d39e00;
+  }
+  
+  /* Hero Sections */
+  .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--hero-image);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 5rem 0;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+  }
+  
+  /* Cards */
+  .category-card,
+  .subcategory-card,
+  .product-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-default);
+    transition: var(--transition);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  
+  .category-card,
+  .subcategory-card {
+    text-align: center;
+    padding: 1.5rem;
+    height: 100%;
+  }
+  
+  .category-card:hover,
+  .subcategory-card:hover,
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  /* Icons */
+  .category-icon,
+  .subcategory-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  /* Product Images */
+  .product-img {
+    height: 200px;
+    object-fit: contain;
+    padding: 1rem;
+    background: #f8f9fa;
+  }
+  
+  .product-img-thumbnail {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .product-img-thumbnail:hover {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+  }
+  
+  #mainImage {
+    border-radius: var(--border-radius);
+    max-height: 400px;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: var(--dark-text);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+  }
+  
+  /* Quantity Controls */
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quantity-display {
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  /* Product Page Specific */
+  .product-container {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-default);
+    padding: 30px;
+    transition: var(--transition);
+  }
+  
+  .product-container:hover {
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .list-group-item {
+    border: none;
+    padding-left: 0;
+  }
+  
+  #specSheet {
+    margin-top: 20px;
+  }
+  
+  /* Checkout Modal */
+  .checkout-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-default);
+  }
+  
+  .order-summary {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Validation */
+  .is-invalid {
+    border-color: #dc3545 !important;
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+    font-size: 0.875em;
+    display: none;
+  }
+  
+  .was-validated .form-control:invalid~.invalid-feedback,
+  .form-control.is-invalid~.invalid-feedback {
+    display: block;
+  }
+  
+/* Billing Modal Styles */
+#billingModal .modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#billingModal .modal-header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+#billingModal .modal-body {
+    padding: 1.5rem;
+}
+
+#orderSummary {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+#billingForm {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+#billingForm input,
+#billingForm textarea {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#billingForm input:focus,
+#billingForm textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+
+#billingForm .form-label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+/* Responsive adjustments */
+
+  @media (max-width: 768px) {
+     #billingModal .modal-dialog {
+        margin: 0.5rem;
+    }
+    
+    #billingModal .modal-body {
+        padding: 1rem;
+    }
+    
+    #billingModal .row {
+        flex-direction: column;
+    }
+    
+    #billingModal .col-md-6 {
+        width: 100%;
+        padding: 0;
+    }
+    
+    #orderSummary {
+        margin-bottom: 1.5rem;
+    }
+    .hero-section {
+      padding: 3rem 0;
+    }
+    
+    .navbar-nav {
+      margin-top: 1rem;
+    }
+    
+    .product-container {
+      padding: 20px;
+    }
+    
+    .d-flex.mb-3 {
+      flex-direction: column;
+    }
+    
+    .me-3.d-flex.flex-column.gap-3 {
+      flex-direction: row !important;
+      margin-bottom: 15px;
+      margin-right: 0 !important;
+    }
+}
