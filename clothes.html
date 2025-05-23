@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothes - buyHive</title>
+    <meta name="description" content="Shop the latest {{category}} at buyHive. Free shipping on orders over ₹499.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">buyHive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Clothes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+                            <li><a class="dropdown-item" href="clothes.html">Clothes</a></li>
+                            <li><a class="dropdown-item" href="HomeDecor.html">Home Decor</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-person"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-person-plus"></i> Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#">
+                            <i class="bi bi-cart"></i> Cart
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Banner -->
+    <div class="container">
+        <div class="hero-section text-center"
+            style="--hero-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80')">
+            <h1 class="display-4 fw-bold">Clothes Collection</h1>
+            <p class="lead">Let your inner fashion icon flow</p>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Clothes</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Featured Products -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Featured Products</h2>
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        class="card-img-top product-img" alt="T-Shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Highlander T-shirt</h5>
+                        <p class="text-success">₹499 <small
+                                class="text-danger text-decoration-line-through">₹799</small></p>
+                        <div class="d-grid gap-2">
+                            <a href="T-shirt.html" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/I/61tTj89JyYL._SY741_.jpg"
+                        class="card-img-top product-img" alt="Shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">Generic Shirt</h5>
+                        <p class="text-success">₹799 <small
+                                class="text-danger text-decoration-line-through">₹899</small></p>
+                        <div class="d-grid gap-2">
+                            <a href="shirt.html" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card">
+                    <img src="https://image.hm.com/assets/hm/68/fd/68fd7b64bbff164c5785be21d313b0731649d7b7.jpg?imwidth=768"
+                        class="card-img-top product-img" alt="jacket">
+                    <div class="card-body">
+                        <h5 class="card-title">Teddy sports jacket</h5>
+                        <p class="text-success">₹2,999 <small
+                                class="text-danger text-decoration-line-through">₹3,999</small></p>
+                        <div class="d-grid gap-2">
+                            <a href="Jacket.html" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card">
+                    <img src="https://image.hm.com/assets/hm/c0/0f/c00f733b864e8a1d45a0acde86b1df3c350e40bb.jpg?imwidth=768"
+                        class="card-img-top product-img" alt="Bomber Jacket">
+                    <div class="card-body">
+                        <h5 class="card-title">Regular Fit Bomber jacket</h5>
+                        <p class="text-success">₹2,299 <small
+                                class="text-danger text-decoration-line-through">₹3,999</small></p>
+                        <div class="d-grid gap-2">
+                            <a href="BomberJ.html" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="#" class="btn btn-outline-primary">View All Clothes</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>buyHive</h5>
+                    <p>Your one-stop destination for all shopping needs. Quality products at affordable prices.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="electronics.html" class="text-white">Electronics</a></li>
+                        <li><a href="clothes.html" class="text-white">Clothing</a></li>
+                        <li><a href="HomeDecor.html" class="text-white">Home Decor</a></li>
+                        <li><a href="#" class="text-white">Deals</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                        <li><a href="#" class="text-white">Shipping</a></li>
+                        <li><a href="#" class="text-white">Returns</a></li>
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to get updates on new products and special offers</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 buyHive. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Cart Functionality Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>

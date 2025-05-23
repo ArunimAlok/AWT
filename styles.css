@@ -3,7 +3,7 @@
   --primary-color: #2563eb;
   --secondary-color: #1e40af;
   --accent-color: #f59e0b;
-  --light-bg: #f8fafc;
+  --light-bg: #ebe6e6;
   --dark-text: #1e293b;
   --shadow-default: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
@@ -37,6 +37,97 @@ body {
 .nav-link {
   font-weight: 500;
   padding: 0.5rem 1rem;
+}
+
+/* Dropdown Menu Styling */
+.navbar .dropdown-menu {
+  background-color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-hover);
+  padding: 0.5rem 0;
+  margin-top: 0;
+  /* Remove gap */
+  display: none;
+  /* Start hidden */
+}
+
+/* Show on hover */
+.navbar .dropdown:hover .dropdown-menu,
+.navbar .dropdown-menu:hover {
+  display: block;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Dropdown Items */
+.navbar .dropdown-item {
+  color: var(--dark-text);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  background: transparent !important;
+}
+
+/* Cool Animated Underline Effect */
+.navbar .dropdown-item::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 1.5rem;
+  width: calc(100% - 3rem);
+  height: 2px;
+  background: var(--primary-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+  color: var(--primary-color);
+  background: transparent;
+}
+
+.navbar .dropdown-item:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Active Item Styling */
+.navbar .dropdown-item.active {
+  color: var(--primary-color);
+}
+
+.navbar .dropdown-item.active::after {
+  transform: scaleX(1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Behavior */
+@media (max-width: 991.98px) {
+  .navbar .dropdown-menu {
+    display: none !important;
+  }
+
+  .navbar .dropdown-toggle.show+.dropdown-menu {
+    display: block !important;
+  }
+
+  .navbar .dropdown-item::after {
+    display: none;
+  }
 }
 
 /* Hero Sections */
@@ -307,48 +398,48 @@ body {
   #billingModal .modal-dialog {
     margin: 0.5rem;
   }
-  
+
   #billingModal .modal-body {
     padding: 1rem;
   }
-  
+
   #billingModal .row {
     flex-direction: column;
   }
-  
+
   #billingModal .col-md-6 {
     width: 100%;
     padding: 0;
   }
-  
+
   #orderSummary {
     margin-bottom: 1.5rem;
   }
-  
+
   .hero-section {
     padding: 3rem 0;
   }
-  
+
   .hero-title {
     font-size: 2rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.1rem;
   }
-  
+
   .navbar-nav {
     margin-top: 1rem;
   }
-  
+
   .product-container {
     padding: 20px;
   }
-  
+
   .d-flex.mb-3 {
     flex-direction: column;
   }
-  
+
   .me-3.d-flex.flex-column.gap-3 {
     flex-direction: row !important;
     margin-bottom: 15px;

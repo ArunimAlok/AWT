@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Name | buyHive</title>
+    <title>Rotating Ferris Wheel | buyHive</title>
     <meta name="description" content="Product description for SEO">
     <!-- Same assets as your original code -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,12 +31,12 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            Clothes
+                            Home Decor
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
                             <li><a class="dropdown-item" href="clothes.html">Clothes</a></li>
-                            <li><a class="dropdown-item" href="home-decor.html">Home Decor</a></li>
+                            <li><a class="dropdown-item" href="HomeDecor.html">Home Decor</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -71,25 +71,27 @@
             <div class="col-md-6">
                 <div class="d-flex mb-3">
                     <div class="me-3 d-flex flex-column gap-3">
-                        <img src="image1.jpg" width="80" height="80" loading="lazy"
-                            class="product-img-thumbnail img-thumbnail" onclick="changeImage(this.src)"
-                            alt="Product alternate view 1">
-                        <img src="image2.jpg" width="80" height="80" loading="lazy"
-                            class="product-img-thumbnail img-thumbnail" onclick="changeImage(this.src)"
-                            alt="Product alternate view 2">
-                        <img src="image3.jpg" width="80" height="80" loading="lazy"
-                            class="product-img-thumbnail img-thumbnail" onclick="changeImage(this.src)"
-                            alt="Product alternate view 3">
+                        <img src="https://nestasia.in/cdn/shop/files/gold-rotating-ferris-wheel-large-metal-showpiece.jpg?v=1726290164&width=600"
+                            width="80" height="80" loading="lazy" class="product-img-thumbnail img-thumbnail"
+                            onclick="changeImage(this.src)" alt="Product alternate view 1">
+                        <img src="https://nestasia.in/cdn/shop/files/elegant-rotating-ferris-wheel-large-metal-showpiece.jpg?v=1726290172&width=600"
+                            width="80" height="80" loading="lazy" class="product-img-thumbnail img-thumbnail"
+                            onclick="changeImage(this.src)" alt="Product alternate view 2">
+                        <img src="https://nestasia.in/cdn/shop/files/modern-rotating-ferris-wheel-large-metal-showpiece.png?v=1726290189&width=600"
+                            width="80" height="80" loading="lazy" class="product-img-thumbnail img-thumbnail"
+                            onclick="changeImage(this.src)" alt="Product alternate view 3">
                     </div>
-                    <img id="mainImage" src="main-image.jpg" loading="eager" class="img-fluid rounded"
-                        alt="Main product image">
+                    <img id="mainImage"
+                        src="https://nestasia.in/cdn/shop/files/gold-rotating-ferris-wheel-large-metal-showpiece.jpg?v=1726290164&width=600"
+                        loading="eager" class="img-fluid rounded" alt="Main product image">
                 </div>
             </div>
 
             <!-- Product Details -->
             <div class="col-md-6">
-                <h1 class="h2 mb-3">Product Full Name (Color, Storage) (RAM)</h1>
-                <p class="text-success h4">₹Price</p>
+                <h1 class="h2 mb-3">Rotating Ferris Wheel Large Metal Showpiece</h1>
+                <p class="text-success h4">₹6,750
+                </p>
                 <p class="text-muted mb-4">Inclusive of all taxes</p>
 
                 <form id="productForm">
@@ -98,49 +100,48 @@
                         <label for="color" class="form-label">Color</label>
                         <select class="form-select" id="color" required>
                             <option value="">Select color</option>
-                            <option value="red">Red</option>
-                            <option value="blue">Blue</option>
-                            <option value="black">Black</option>
+                            <option value="red">Gold</option>
+                            <option value="blue">Bronze</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
-                        <label for="ram" class="form-label">RAM</label>
+                        <label for="ram" class="form-label">Material</label>
                         <select class="form-select" id="ram" required>
-                            <option value="">Select RAM</option>
-                            <option value="4">4 GB</option>
-                            <option value="8">8 GB</option>
+                            <option value="">Select Material</option>
+                            <option value="4">Metal</option>
+                            <option value="8">Glass</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
-                        <label for="storage" class="form-label">Storage</label>
+                        <label for="storage" class="form-label">Customize</label>
                         <select class="form-select" id="storage" required onchange="showSpecs()">
-                            <option value="">Select Storage</option>
-                            <option value="64">64 GB</option>
-                            <option value="128">128 GB</option>
+                            <option value="">Select Custom</option>
+                            <option value="64">HandCrafted</option>
+                            <option value="128">Machine Crafted</option>
                         </select>
                     </div>
 
                     <!-- Key Specifications -->
                     <ul class="list-group mb-4">
-                        <li class="list-group-item">X GB RAM | Y GB ROM</li>
-                        <li class="list-group-item">Z inch Display Type</li>
-                        <li class="list-group-item">XXMP Rear Camera | YYMP Front Camera</li>
-                        <li class="list-group-item">XXXX mAh Battery</li>
-                        <li class="list-group-item">Key Feature 1</li>
-                        <li class="list-group-item">Key Feature 2</li>
+                        <li class="list-group-item">Rust-resistant iron material</li>
+                        <li class="list-group-item">Sturdy and durable build
+                        </li>
+                        <li class="list-group-item">High-sheen metallic gold finish</li>
+                        <li class="list-group-item">Vintage rotating Ferris wheel design</li>
+                        <li class="list-group-item">Base stand with anti-skid foam pad
+                        </li>
                     </ul>
 
                     <!-- Dynamic Spec Sheet (Shows when storage is selected) -->
                     <div id="specSheet" class="border p-3 rounded bg-light" style="display: none;">
                         <h5>Highlights</h5>
                         <ul>
-                            <li><strong>Performance:</strong> Processor details</li>
-                            <li><strong>Display:</strong> Screen specifications</li>
+                            <li><strong>Size:</strong> 42cm L x 15cm B x 49cm H</li>
+                            <li><strong>Colour:</strong> Gold</li>
                             <li><strong>Camera:</strong> Camera details</li>
-                            <li><strong>Battery:</strong> Battery life information</li>
-                            <li><strong>Warranty:</strong> Warranty details</li>
+                            <li><strong>Material:</strong> Iron</li>
                         </ul>
                     </div>
 

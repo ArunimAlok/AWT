@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Name | buyHive</title>
+    <title>Bomber jacket | buyHive</title>
     <meta name="description" content="Product description for SEO">
     <!-- Same assets as your original code -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
                             <li><a class="dropdown-item" href="clothes.html">Clothes</a></li>
-                            <li><a class="dropdown-item" href="home-decor.html">Home Decor</a></li>
+                            <li><a class="dropdown-item" href="HomeDecor.html">Home Decor</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -64,6 +64,7 @@
             </div>
         </div>
     </nav>
+
     <!-- Product Section (Customize this for each product) -->
     <div class="container my-5">
         <div class="product-container row">
@@ -71,25 +72,22 @@
             <div class="col-md-6">
                 <div class="d-flex mb-3">
                     <div class="me-3 d-flex flex-column gap-3">
-                        <img src="image1.jpg" width="80" height="80" loading="lazy"
+                        <img src="https://image.hm.com/assets/hm/c0/0f/c00f733b864e8a1d45a0acde86b1df3c350e40bb.jpg?imwidth=768" width="80" height="80" loading="lazy"
                             class="product-img-thumbnail img-thumbnail" onclick="changeImage(this.src)"
                             alt="Product alternate view 1">
-                        <img src="image2.jpg" width="80" height="80" loading="lazy"
+                        <img src="https://image.hm.com/assets/hm/d6/22/d622b5bb89c21949d8e7b7332e3dd6df13c3b002.jpg?imwidth=768" width="80" height="80" loading="lazy"
                             class="product-img-thumbnail img-thumbnail" onclick="changeImage(this.src)"
                             alt="Product alternate view 2">
-                        <img src="image3.jpg" width="80" height="80" loading="lazy"
-                            class="product-img-thumbnail img-thumbnail" onclick="changeImage(this.src)"
-                            alt="Product alternate view 3">
                     </div>
-                    <img id="mainImage" src="main-image.jpg" loading="eager" class="img-fluid rounded"
+                    <img id="mainImage" src="https://image.hm.com/assets/hm/c0/0f/c00f733b864e8a1d45a0acde86b1df3c350e40bb.jpg?imwidth=768" loading="eager" class="img-fluid rounded"
                         alt="Main product image">
                 </div>
             </div>
 
             <!-- Product Details -->
             <div class="col-md-6">
-                <h1 class="h2 mb-3">Product Full Name (Color, Storage) (RAM)</h1>
-                <p class="text-success h4">₹Price</p>
+                <h1 class="h2 mb-3">Regular Fit Bomber jacket</h1>
+                <p class="text-success h4">₹2,299</p>
                 <p class="text-muted mb-4">Inclusive of all taxes</p>
 
                 <form id="productForm">
@@ -98,49 +96,44 @@
                         <label for="color" class="form-label">Color</label>
                         <select class="form-select" id="color" required>
                             <option value="">Select color</option>
-                            <option value="red">Red</option>
-                            <option value="blue">Blue</option>
+                            <option value="blue">Dark Grey</option>
                             <option value="black">Black</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
-                        <label for="ram" class="form-label">RAM</label>
+                        <label for="ram" class="form-label">Size</label>
                         <select class="form-select" id="ram" required>
-                            <option value="">Select RAM</option>
-                            <option value="4">4 GB</option>
-                            <option value="8">8 GB</option>
+                            <option value="">Select Size</option>
+                            <option value="4">Medium</option>
+                            <option value="8">Large</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
-                        <label for="storage" class="form-label">Storage</label>
+                        <label for="storage" class="form-label">Material</label>
                         <select class="form-select" id="storage" required onchange="showSpecs()">
-                            <option value="">Select Storage</option>
-                            <option value="64">64 GB</option>
-                            <option value="128">128 GB</option>
+                            <option value="">Select Material</option>
+                            <option value="64">Polyester</option>
+                            <option value="128">Elastane</option>
                         </select>
                     </div>
 
                     <!-- Key Specifications -->
                     <ul class="list-group mb-4">
-                        <li class="list-group-item">X GB RAM | Y GB ROM</li>
-                        <li class="list-group-item">Z inch Display Type</li>
-                        <li class="list-group-item">XXMP Rear Camera | YYMP Front Camera</li>
-                        <li class="list-group-item">XXXX mAh Battery</li>
-                        <li class="list-group-item">Key Feature 1</li>
-                        <li class="list-group-item">Key Feature 2</li>
+                        <li class="list-group-item">Elastane is an elastic synthetic fibre made from oil (a fossil resource)</li>
+                        <li class="list-group-item">Recycled polyester is polyester made from PET bottles or end-of-life textile waste</li>
+                        <li class="list-group-item">57% Recycled polyester from textiles</li>
+                        <li class="list-group-item">42% Recycled polyester</li>
                     </ul>
 
                     <!-- Dynamic Spec Sheet (Shows when storage is selected) -->
                     <div id="specSheet" class="border p-3 rounded bg-light" style="display: none;">
                         <h5>Highlights</h5>
                         <ul>
-                            <li><strong>Performance:</strong> Processor details</li>
-                            <li><strong>Display:</strong> Screen specifications</li>
-                            <li><strong>Camera:</strong> Camera details</li>
-                            <li><strong>Battery:</strong> Battery life information</li>
-                            <li><strong>Warranty:</strong> Warranty details</li>
+                            <li><strong>Shell:</strong> Polyester 100%</li>
+                            <li><strong>Lining:</strong> Polyester 100%</li>
+                            <li><strong>Rib:</strong> Polyester 97%, Elastane 3%</li>
                         </ul>
                     </div>
 
