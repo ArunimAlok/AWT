@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>buyHive - Your One-Stop Online Store</title>
+  <title>buyHive - Exclusive Deals & Offers</title>
   <meta name="description"
-    content="buyHive offers electronics, clothing, home decor and more. Free shipping on orders over ₹499.">
+    content="Discover amazing deals and discounts on electronics, clothing, home decor and more at buyHive. Limited time offers!">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <!-- Top Navigation -->
+  <!-- Top Navigation (Same as Home Page) -->
   <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">buyHive</a>
@@ -39,7 +39,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="deals.html">Deals</a>
+            <a class="nav-link active" href="deals.html">Deals</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
@@ -64,123 +64,87 @@
     </div>
   </nav>
 
-  <!-- Hero Banner with Category Deal Card Styling -->
-  <div class="container mb-5">
-    <div class="hero-as-card text-center"
-      style="--hero-image: url('https://static.vecteezy.com/system/resources/previews/013/977/851/non_2x/summer-time-special-offer-horizontal-banner-with-tropical-leaves-and-flat-elements-template-for-sales-promo-ads-bright-floral-illustration-with-text-blocks-vector.jpg')">
-      <div class="hero-img-container">
-        <!-- Image is set via CSS background -->
-      </div>
-      <div class="hero-overlay">
-        <h1 class="display-4 fw-bold mb-3">Summer Sale is Live!</h1>
-        <p class="lead mb-4">Up to 50% off on selected items</p>
-        <a href="deals.html" class="btn btn-primary btn-lg">Shop Now</a>
-      </div>
+<!-- Hero Banner with Category Deal Card Styling -->
+<div class="container mb-5">
+  <div class="hero-as-card text-center"
+    style="--hero-image: url('https://thumbs.dreamstime.com/b/summer-sale-horizontal-banner-bright-invitation-fresh-lemon-tropical-leaves-hexagons-animal-zebra-print-tasty-poster-213794270.jpg')">
+    <div class="hero-img-container">
+      <!-- Image is set via CSS background -->
+    </div>
+    <div class="hero-overlay">
+      <h1 class="display-4 fw-bold mb-3">Exclusive deals!</h1>
+      <p class="lead mb-4">Limited time offer - Don't miss out!</p>
     </div>
   </div>
+</div>
 
-  <!-- Categories Section -->
+  <!-- Flash Sale Section -->
   <div class="container my-5">
-    <h2 class="text-center mb-4">Shop by Category</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Flash Sale</h2>
+      <div class="sale-timer bg-danger text-white p-2 rounded">
+        <i class="bi bi-lightning-charge-fill"></i> Ends in: <span id="countdown">23:59:59</span>
+      </div>
+    </div>
     <div class="row">
-      <div class="col-md-4">
-        <div class="category-card">
-          <div class="category-icon">
-            <i class="bi bi-phone"></i>
-          </div>
-          <h3>Electronics</h3>
-          <p>Smartphones, Laptops, TVs & more</p>
-          <a href="Electronics.html" class="btn btn-outline-primary">Browse</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="category-card">
-          <div class="category-icon">
-            <i class="bi bi-tag"></i>
-          </div>
-          <h3>Clothing</h3>
-          <p>Men, Women & Kids Fashion</p>
-          <a href="clothes.html" class="btn btn-outline-primary">Browse</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="category-card">
-          <div class="category-icon">
-            <i class="bi bi-house-door"></i>
-          </div>
-          <h3>Home Decor</h3>
-          <p>Furniture, Lighting & Decor</p>
-          <a href="HomeDecor.html" class="btn btn-outline-primary">Browse</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Featured Products -->
-  <div class="container my-5">
-    <h2 class="text-center mb-4">Featured Products</h2>
-    <div class="row g-4 justify-content-between"> <!-- Added g-4 and justify-content-between -->
-      <div class="col-lg-3 col-md-5"> <!-- Changed from col-md-6 to col-md-5 for better spacing -->
-        <div class="product-card sale-item h-100"> <!-- Added h-100 for equal height -->
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card sale-item">
           <span class="badge bg-danger sale-badge">50% OFF</span>
           <img
             src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS51reAemRvW9Uda8JesouGgWeiaMbJiwBcAAOsng1ihuIIj_49_EW1TywZi_8YDleiJ_aidm_6-gr2q2nGCQuzXiQr1mqh4GW9B8ACDoHq"
             class="card-img-top product-img" alt="Smartphone">
-          <div class="card-body d-flex flex-column"> <!-- Added flex column -->
+          <div class="card-body">
             <h5 class="card-title">Marshall Major IV Bluetooth Headphones</h5>
-            <p class="text-success mt-auto">₹2,499 <small
-                class="text-danger text-decoration-line-through">₹4,999</small></p>
-            <div class="d-grid gap-2 mt-2">
+            <p class="text-success">₹2,499 <small class="text-danger text-decoration-line-through">₹4,999</small></p>
+            <div class="d-grid gap-2">
               <a href="marshall.html" class="btn btn-primary">Buy Now</a>
               <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-5">
-        <div class="product-card sale-item h-100">
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card sale-item">
           <span class="badge bg-danger sale-badge">60% OFF</span>
           <img
             src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRJBBUiZr9Z0jgAmajhMr75MG_ibHiOtPdAbWGarWIwOuV9304kBFiKQfajHYT5iN1E6x4PrhE2rG5KaS4oVmQQER6dYx6v7REhBOnHaIvqM47MEaRtP3_A"
             class="card-img-top product-img" alt="Smart Watch">
-          <div class="card-body d-flex flex-column">
+          <div class="card-body">
             <h5 class="card-title">WHOOP 4.0 Health and Fitness Tracker</h5>
-            <p class="text-success mt-auto">₹12,150 <small
-                class="text-danger text-decoration-line-through">₹30,375</small></p>
-            <div class="d-grid gap-2 mt-2">
+            <p class="text-success">₹12,150 <small class="text-danger text-decoration-line-through">₹30,375</small></p>
+            <div class="d-grid gap-2">
               <a href="whoop.html" class="btn btn-primary">Buy Now</a>
               <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-5">
-        <div class="product-card sale-item h-100">
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card sale-item">
           <span class="badge bg-danger sale-badge">70% OFF</span>
-          <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/71lnCG5o9vL._SY450_.jpg"
+          <img
+            src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/71lnCG5o9vL._SY450_.jpg"
             class="card-img-top product-img" alt="Camera">
-          <div class="card-body d-flex flex-column">
+          <div class="card-body">
             <h5 class="card-title">Fujifilm Instax Mini Evo Hybrid Instant Camera</h5>
-            <p class="text-success mt-auto">₹3,899 <small
-                class="text-danger text-decoration-line-through">₹12,999</small></p>
-            <div class="d-grid gap-2 mt-2">
+            <p class="text-success">₹3,899 <small class="text-danger text-decoration-line-through">₹12,999</small></p>
+            <div class="d-grid gap-2">
               <a href="fuji.html" class="btn btn-primary">Buy Now</a>
               <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 col-md-5">
-        <div class="product-card sale-item h-100">
+      <div class="col-lg-3 col-md-6">
+        <div class="product-card sale-item">
           <span class="badge bg-danger sale-badge">40% OFF</span>
           <img
             src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR0qYV8sNxv3ZeX_Ex5n29bQWIld_h_fGvwXNn0n5zxueNJ4fpYRGAMIwa8qgLkMZ9QmWiG98KbKipy7GHmZr4UUJJpJQPuHRFDbv-2mniVRXit_JPvez0e"
             class="card-img-top product-img" alt="Speaker">
-          <div class="card-body d-flex flex-column">
+          <div class="card-body">
             <h5 class="card-title">Portronics Trifusion 16W HD Sound</h5>
-            <p class="text-success mt-auto">₹1,439<small class="text-danger text-decoration-line-through"> ₹2,398</small>
-            </p>
-            <div class="d-grid gap-2 mt-2">
+            <p class="text-success">₹1,439<small class="text-danger text-decoration-line-through">₹2,398</small></p>
+            <div class="d-grid gap-2">
               <a href="port.html" class="btn btn-primary">Buy Now</a>
               <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
             </div>
@@ -190,7 +154,95 @@
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- Hot Deals Section -->
+  <div class="container my-5" id="hot-deals">
+    <h2 class="text-center mb-4">Hot Deals</h2>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="deal-banner p-4 rounded" style="background-color: #f8f9fa;">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h3>Summer Collection</h3>
+              <p class="text-muted">Up to 60% off on selected items</p>
+              <a href="clothes.html" class="btn btn-primary">Shop Now</a>
+            </div>
+            <div class="col-md-6">
+              <img
+                src="https://images.unsplash.com/photo-1479064555552-3ef4979f8908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                class="img-fluid rounded" alt="Summer Collection">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="deal-banner p-4 rounded" style="background-color: #e9ecef;">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h3>Tech Week</h3>
+              <p class="text-muted">Biggest discounts on electronics</p>
+              <a href="Electronics.html" class="btn btn-primary">Shop Now</a>
+            </div>
+            <div class="col-md-6">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                class="img-fluid rounded" alt="Tech Week">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Category Deals -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Deals by Category</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4 d-flex">
+        <div class="category-deal-card w-100">
+          <div class="category-deal-img-container">
+            <img
+              src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Electronics" class="category-deal-img">
+          </div>
+          <div class="category-deal-overlay">
+            <h3 class="mb-2">Electronics</h3>
+            <p class="mb-3">Up to 70% off</p>
+            <a href="electronics.html" class="btn btn-light">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 d-flex">
+        <div class="category-deal-card w-100">
+          <div class="category-deal-img-container">
+            <img
+              src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+              alt="Clothing" class="category-deal-img">
+          </div>
+          <div class="category-deal-overlay">
+            <h3 class="mb-2">Clothing</h3>
+            <p class="mb-3">Up to 60% off</p>
+            <a href="clothes.html" class="btn btn-light">Shop Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 d-flex">
+        <div class="category-deal-card w-100">
+          <div class="category-deal-img-container">
+            <img
+              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+              alt="Home Decor" class="category-deal-img">
+          </div>
+          <div class="category-deal-overlay">
+            <h3 class="mb-2">Home Decor</h3>
+            <p class="mb-3">Up to 50% off</p>
+            <a href="HomeDecor.html" class="btn btn-light">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (Same as Home Page) -->
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -201,7 +253,7 @@
         <div class="col-md-2">
           <h5>Shop</h5>
           <ul class="list-unstyled">
-            <li><a href="Electronics.html" class="text-white">Electronics</a></li>
+            <li><a href="electronics.html" class="text-white">Electronics</a></li>
             <li><a href="clothes.html" class="text-white">Clothing</a></li>
             <li><a href="HomeDecor.html" class="text-white">Home Decor</a></li>
             <li><a href="deals.html" class="text-white">Deals</a></li>
@@ -244,6 +296,26 @@
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js" defer></script>
+  <script>
+    // Countdown timer for flash sale
+    function updateCountdown() {
+      const now = new Date();
+      const endOfDay = new Date();
+      endOfDay.setHours(23, 59, 59, 999);
+
+      const diff = endOfDay - now;
+
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('countdown').textContent =
+        `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login to buyHive - Your One-Stop Online Store</title>
+  <meta name="description" content="Login to your buyHive account to access your cart, wishlist, and order history.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Top Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">buyHive</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Categories
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="electronics.html">Electronics</a></li>
+              <li><a class="dropdown-item" href="clothes.html">Clothes</a></li>
+              <li><a class="dropdown-item" href="HomeDecor.html">Home Decor</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="deals.html">Deals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="login.html"><i class="bi bi-person"></i> Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html"><i class="bi bi-person-plus"></i> Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link position-relative" href="#">
+              <i class="bi bi-cart"></i> Cart
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Login Section -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8">
+        <div class="auth-card p-4 p-md-5 shadow-sm rounded">
+          <div class="text-center mb-4">
+            <h2>Welcome Back!</h2>
+            <p class="text-muted">Sign in to access your account</p>
+          </div>
+
+          <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+              <div class="text-end mt-2">
+                <a href="#" class="text-decoration-none">Forgot password?</a>
+              </div>
+            </div>
+            <div class="d-grid mb-3">
+              <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            <div class="text-center">
+              <p class="mb-0">Don't have an account? <a href="signup.html" class="text-decoration-none">Sign up</a></p>
+            </div>
+          </form>
+
+          <div class="mt-4">
+            <div class="d-flex align-items-center mb-3">
+              <hr class="flex-grow-1">
+              <span class="mx-3 text-muted">or continue with</span>
+              <hr class="flex-grow-1">
+            </div>
+            <div class="row g-2">
+              <div class="col">
+                <a href="#" class="btn btn-outline-secondary w-100">
+                  <i class="bi bi-google"></i> Google
+                </a>
+              </div>
+              <div class="col">
+                <a href="#" class="btn btn-outline-secondary w-100">
+                  <i class="bi bi-facebook"></i> Facebook
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>buyHive</h5>
+          <p>Your one-stop destination for all shopping needs. Quality products at affordable prices.</p>
+        </div>
+        <div class="col-md-2">
+          <h5>Shop</h5>
+          <ul class="list-unstyled">
+            <li><a href="Electronics.html" class="text-white">Electronics</a></li>
+            <li><a href="clothes.html" class="text-white">Clothing</a></li>
+            <li><a href="HomeDecor.html" class="text-white">Home Decor</a></li>
+            <li><a href="deals.html" class="text-white">Deals</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5>Help</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">FAQs</a></li>
+            <li><a href="#" class="text-white">Shipping</a></li>
+            <li><a href="#" class="text-white">Returns</a></li>
+            <li><a href="#" class="text-white">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Newsletter</h5>
+          <p>Subscribe to get updates on new products and special offers</p>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <hr class="my-4 bg-light">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">© 2023 buyHive. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="#" class="text-white me-3">Privacy Policy</a>
+          <a href="#" class="text-white me-3">Terms of Service</a>
+          <a href="#" class="text-white">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js" defer></script>
+</body>
+
+</html>

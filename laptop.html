@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptops - buyHive</title>
+    <meta name="description"
+        content="Shop the latest laptops at buyHive - gaming laptops, ultrabooks, business laptops and more. Free shipping on orders over ₹499.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Top Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">buyHive</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Electronics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="electronics.html">All Electronics</a></li>
+                            <li><a class="dropdown-item active" href="laptop.html">Laptops</a></li>
+                            <li><a class="dropdown-item" href="smartphones.html">Smartphones</a></li>
+                            <li><a class="dropdown-item" href="smartwatch.html">Smart Watches</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="deals.html">Deals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html"><i class="bi bi-person"></i> Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup.html"><i class="bi bi-person-plus"></i> Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#">
+                            <i class="bi bi-cart"></i> Cart
+                            <span
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="container mb-5">
+        <div class="hero-as-card text-center"
+            style="--hero-image: url('https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80')">
+            <div class="hero-img-container">
+                <!-- Image is set via CSS background -->
+            </div>
+            <div class="hero-overlay">
+                <h1 class="display-4 fw-bold mb-3">Premium Laptops</h1>
+                <p class="lead mb-4">Powerful performance for work and play</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="electronics.html">Electronics</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Laptops</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Featured Laptops -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Featured Laptops</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh3iP1QK5Cbi71uTpqMYxq3nnM2BwVvusRYg&s"
+                        class="card-img-top product-img" alt="MacBook Pro 14">
+                    <div class="card-body">
+                        <h5 class="card-title">MacBook Pro 14"</h5>
+                        <p class="text-success">₹1,49,900 <small
+                                class="text-danger text-decoration-line-through">₹1,59,900</small>
+                        </p>
+                        <div class="d-grid gap-2">
+                            <a href="macbook.html" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/61uD6yuCNTL._SX569_.jpg"
+                        class="card-img-top product-img" alt="Hp XPS 13">
+                    <div class="card-body">
+                        <h5 class="card-title">HP 14, 13th Gen </h5>
+                        <p class="text-success">₹82,500 <small
+                                class="text-danger text-decoration-line-through">₹90,990</small></p>
+                        <div class="d-grid gap-2">
+                            <a href="hp.html" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/71ZXTgMHPsL._SX569_.jpg"
+                        class="card-img-top product-img" alt="Lenovo">
+                    <div class="card-body">
+                        <h5 class="card-title">Lenovo Yoga Slim 7</h5>
+                        <p class="text-success">₹1,10,990<small
+                                class="text-danger text-decoration-line-through">₹1,49,990</small></p>
+                        <div class="d-grid gap-2">
+                            <a href="lenovo.html" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="product-card">
+                    <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T2/images/I/41sNgNeF5dL._SX300_SY300_QL70_FMwebp_.jpg"
+                        class="card-img-top product-img" alt="HP Spectre x360">
+                    <div class="card-body">
+                        <h5 class="card-title">HP Spectre x360</h5>
+                        <p class="text-success">₹1,73,490 <small
+                                class="text-danger text-decoration-line-through">₹1,80,990</small></p>
+                        <div class="d-grid gap-2">
+                            <a href="spectre.html" class="btn btn-primary">Buy Now</a>
+                            <a href="#" class="btn btn-outline-secondary add-to-cart">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparison Section -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Laptop Comparison</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Processor</th>
+                        <th>RAM</th>
+                        <th>Storage</th>
+                        <th>Display</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MacBook Pro 14"</td>
+                        <td>M3 Pro (12-core)</td>
+                        <td>18GB</td>
+                        <td>512GB SSD</td>
+                        <td>14.2" Liquid Retina XDR</td>
+                        <td>₹1,49,900</td>
+                    </tr>
+                    <tr>
+                        <td>HP 14</td>
+                        <td>Intel Core i7-1355U Turbo Boost</td>
+                        <td>16GB</td>
+                        <td>512GB SSD</td>
+                        <td>14" FHD IPS</td>
+                        <td>₹82,500</td>
+                    </tr>
+                    <tr>
+                        <td>Lenovo Yoga Slim 7</td>
+                        <td>AMD Ryzen 7 7840U</td>
+                        <td>16GB</td>
+                        <td>1TB SSD</td>
+                        <td>14" 2.8K OLED</td>
+                        <td>₹1,10,990</td>
+                    </tr>
+                    <tr>
+                        <td>HP Spectre x360</td>
+                        <td>Intel Core i7-1355U</td>
+                        <td>16GB</td>
+                        <td>1TB SSD</td>
+                        <td>13.5" 3K2K OLED Touch</td>
+                        <td>₹1,73,490</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="mb-4">Why Choose buyHive for Laptops?</h2>
+                <div class="d-flex mb-3">
+                    <div class="me-3">
+                        <i class="bi bi-check-circle-fill text-primary fs-4"></i>
+                    </div>
+                    <div>
+                        <h5>Genuine Products</h5>
+                        <p>All laptops come with manufacturer warranty and original software.</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="me-3">
+                        <i class="bi bi-cpu text-primary fs-4"></i>
+                    </div>
+                    <div>
+                        <h5>Performance Tested</h5>
+                        <p>Every laptop undergoes rigorous quality checks before shipping.</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-3">
+                    <div class="me-3">
+                        <i class="bi bi-shield-check text-primary fs-4"></i>
+                    </div>
+                    <div>
+                        <h5>Virus Protection</h5>
+                        <p>Free antivirus software pre-installed on all Windows laptops.</p>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="me-3">
+                        <i class="bi bi-headset text-primary fs-4"></i>
+                    </div>
+                    <div>
+                        <h5>Expert Support</h5>
+                        <p>Dedicated tech support for all your laptop queries.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80"
+                    class="img-fluid rounded" alt="Laptop Collection">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>buyHive</h5>
+                    <p>Your one-stop destination for all shopping needs. Quality products at affordable prices.</p>
+                </div>
+                <div class="col-md-2">
+                    <h5>Shop</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="Electronics.html" class="text-white">Electronics</a></li>
+                        <li><a href="clothes.html" class="text-white">Clothing</a></li>
+                        <li><a href="HomeDecor.html" class="text-white">Home Decor</a></li>
+                        <li><a href="deals.html" class="text-white">Deals</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Help</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">FAQs</a></li>
+                        <li><a href="#" class="text-white">Shipping</a></li>
+                        <li><a href="#" class="text-white">Returns</a></li>
+                        <li><a href="#" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Subscribe to get updates on new products and special offers</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2023 buyHive. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white me-3">Privacy Policy</a>
+                    <a href="#" class="text-white me-3">Terms of Service</a>
+                    <a href="#" class="text-white">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

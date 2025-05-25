@@ -3,7 +3,7 @@
   --primary-color: #2563eb;
   --secondary-color: #1e40af;
   --accent-color: #f59e0b;
-  --light-bg: #F0F8FF;
+  --light-bg: #cbeaff;
   --dark-text: #1e293b;
   --shadow-default: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
@@ -130,15 +130,167 @@ body {
   }
 }
 
-/* Hero Sections */
-.hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--hero-image);
+.hero-as-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  /* Adjust height as needed */
+}
+
+.hero-img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--hero-image);
   background-size: cover;
   background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.hero-as-card:hover .hero-img-container {
+  transform: scale(1.05);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  /* Lighter overlay for better text visibility */
   color: white;
-  padding: 5rem 0;
-  border-radius: var(--border-radius);
-  margin-bottom: 2rem;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-as-card {
+    min-height: 300px;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.category-deal-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-deal-img-container {
+  height: 200px;
+  /* Fixed height for all images */
+  overflow: hidden;
+}
+
+.category-deal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.category-deal-card:hover .category-deal-img {
+  transform: scale(1.05);
+}
+
+.category-deal-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* About Page Specific Styles */
+.hero-as-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+}
+
+.hero-img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.team-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid var(--bs-primary);
+}
+
+.value-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.value-icon {
+  color: white;
+}
+
+/* Login Page Specific Styles */
+.auth-card {
+  background: white;
+  border-radius: 8px;
 }
 
 /* Buttons */
