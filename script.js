@@ -162,10 +162,11 @@ document.addEventListener('DOMContentLoaded', function () {
         let productData = {};
 
         if (element.closest('.product-card')) {
+            const priceElement = productCard.querySelector('.text-success');
             productData = {
                 id: getProductIdFromCard(productCard),
                 name: productCard.querySelector('.card-title').textContent,
-                price: parseFloat(productCard.querySelector('.text-success').textContent.replace(/[^0-9.]/g, '')),
+                price: extractDiscountedPrice(priceElement), // Modified to use helper function
                 image: productCard.querySelector('.product-img').src
             };
         } else {
@@ -178,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return null;
             }
 
+            const priceElement = document.querySelector('.text-success');
             productData = {
                 id: getCurrentPageProductId() +
                     (color ? '-' + color : '') +
@@ -187,12 +189,24 @@ document.addEventListener('DOMContentLoaded', function () {
                     (color ? ' (' + document.getElementById('color').options[document.getElementById('color').selectedIndex].text + ')' : '') +
                     (ram ? ' ' + ram + 'GB RAM' : '') +
                     (storage ? ' ' + storage + 'GB' : ''),
-                price: parseFloat(document.querySelector('.text-success').textContent.replace(/[^0-9.]/g, '')),
+                price: extractDiscountedPrice(priceElement), // Modified to use helper function
                 image: document.getElementById('mainImage').src
             };
         }
 
         return productData;
+    }
+
+    /**
+     * Extracts the discounted price from price element
+     * @param {HTMLElement} priceElement - The element containing price HTML
+     * @returns {number} The numeric discounted price
+     */
+    function extractDiscountedPrice(priceElement) {
+        // Get the text content before any child elements (the discounted price)
+        const priceText = priceElement.childNodes[0]?.nodeValue?.trim() || priceElement.textContent;
+        // Remove currency symbol and commas, then parse to float
+        return parseFloat(priceText.replace(/[^0-9.]/g, ''));
     }
 
     // ======================
@@ -463,4 +477,75 @@ document.addEventListener('DOMContentLoaded', function () {
     setupImageGallery();
     updateCartCounter();
     initializeQuantityControls();
+
+    // ======================
+    // NEWSLETTER SUBSCRIPTION (ADD THIS AT THE BOTTOM)
+    // ======================
+    const subscribeBtn = document.getElementById('subscribeBtn');
+
+    if (subscribeBtn) { // Check if the button exists
+        subscribeBtn.addEventListener('click', function () {
+            const emailInput = document.getElementById('newsletterEmail');
+            const messageElement = document.getElementById('subscribeMessage');
+
+            // Simple email validation
+            if (emailInput.value && emailInput.value.includes('@')) {
+                emailInput.value = ''; // Clear input on success
+                showSubscriptionMessage(messageElement, 'Subscribed!', 'text-success');
+            } else {
+                showSubscriptionMessage(messageElement, 'Please enter a valid email', 'text-danger');
+            }
+        });
+    }
+
+    /**
+     * Shows a temporary subscription message (3 seconds)
+     * @param {HTMLElement} element - The message container
+     * @param {string} message - Text to display
+     * @param {string} className - CSS class (e.g., 'text-success' or 'text-danger')
+     */
+    function showSubscriptionMessage(element, message, className) {
+        element.textContent = message;
+        element.className = className;
+        element.style.display = 'block';
+
+        setTimeout(() => {
+            element.style.display = 'none';
+        }, 3000);
+    }
+    const shippingPolicyModal = new bootstrap.Modal('#shippingPolicyModal');
+    // Return Process Modal
+    const returnModal = new bootstrap.Modal('#returnProcessModal');
+
+    // Trigger modal from "Start Return Process" buttons
+    document.querySelectorAll('.start-return-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            returnModal.show();
+
+            // Reset steps to first step when modal opens
+            document.querySelectorAll('.return-steps .step').forEach((step, index) => {
+                step.classList.toggle('active', index === 0);
+            });
+        });
+    });
+
+    // Next step button functionality
+    document.getElementById('startReturnBtn').addEventListener('click', function () {
+        const activeStep = document.querySelector('.return-steps .step.active');
+        const nextStep = activeStep.nextElementSibling;
+
+        if (nextStep) {
+            activeStep.classList.remove('active');
+            nextStep.classList.add('active');
+
+            // Update button text if last step
+            if (!nextStep.nextElementSibling) {
+                this.innerHTML = 'Print Return Label <i class="bi bi-printer ms-2"></i>';
+            }
+        } else {
+            // Final step action would go here
+            alert('Return process completed! (This would redirect to label printing in real implementation)');
+            returnModal.hide();
+        }
+    });
 });
