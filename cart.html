@@ -353,76 +353,62 @@
         </div>
     </div>
 
-    <!-- Bootstrap Icons -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    /**
-     * Cart Page Functionality
-     * 
-     * This script handles:
-     * - Displaying cart items
-     * - Updating quantities
-     * - Calculating totals
-     * - Checkout process
-     */
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Get cart from localStorage
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-        // DOM elements
-        const cartItemsContainer = document.getElementById('cart-items-container');
-        const subtotalElement = document.getElementById('subtotal');
-        const shippingElement = document.getElementById('shipping');
-        const taxElement = document.getElementById('tax');
-        const totalElement = document.getElementById('total');
-        const checkoutBtn = document.getElementById('checkout-btn');
-        const cartCountElements = document.querySelectorAll('.cart-count');
-        const cartCountDisplay = document.querySelector('.cart-count-display');
-
-        // Initialize the page
-        renderCartItems();
-        updateCartSummary();
-        updateCartCounter();
-
+    <script>
         /**
-         * Formats a number to 2 decimal places for currency display
-         * @param {number} num - The number to format
-         * @returns {string} Formatted currency string
+         * Cart Page Functionality
          */
-        function formatCurrency(num) {
-            return '₹' + num.toFixed(2);
-        }
 
-        /**
-         * Calculates precise multiplication and addition to avoid floating point errors
-         * @param {number} a - First number
-         * @param {number} b - Second number
-         * @returns {number} Precise result
-         */
-        function preciseMultiply(a, b) {
-            return parseFloat((Math.round(a * b * 100) / 100).toFixed(2));
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        /**
-         * Precise addition to avoid floating point errors
-         * @param {number} a - First number
-         * @param {number} b - Second number
-         * @returns {number} Precise result
-         */
-        function preciseAdd(a, b) {
-            return parseFloat((Math.round((a + b) * 100) / 100).toFixed(2));
-        }
+            const cartItemsContainer = document.getElementById('cart-items-container');
+            const subtotalElement = document.getElementById('subtotal');
+            const shippingElement = document.getElementById('shipping');
+            const taxElement = document.getElementById('tax');
+            const totalElement = document.getElementById('total');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            const cartCountElements = document.querySelectorAll('.cart-count');
+            const cartCountDisplay = document.querySelector('.cart-count-display');
 
-        /**
-         * Renders all cart items in the cart container
-         */
-        function renderCartItems() {
-            if (cart.length === 0) {
-                // Show empty cart message
-                cartItemsContainer.innerHTML = `
+            renderCartItems();
+            updateCartSummary();
+            updateCartCounter();
+
+            /**
+             * Formats a number to 2 decimal places for currency display
+             * @param {number} num - The number to format
+             * @returns {string} Formatted currency string
+             */
+            function formatCurrency(num) {
+                return '₹' + num.toFixed(2);
+            }
+
+            /**
+             * Calculates precise multiplication and addition to avoid floating point errors
+             * @param {number} a - First number
+             * @param {number} b - Second number
+             * @returns {number} Precise result
+             */
+            function preciseMultiply(a, b) {
+                return parseFloat((Math.round(a * b * 100) / 100).toFixed(2));
+            }
+
+            /**
+             * Precise addition to avoid floating point errors
+             * @param {number} a - First number
+             * @param {number} b - Second number
+             * @returns {number} Precise result
+             */
+            function preciseAdd(a, b) {
+                return parseFloat((Math.round((a + b) * 100) / 100).toFixed(2));
+            }
+
+            function renderCartItems() {
+                if (cart.length === 0) {
+                    cartItemsContainer.innerHTML = `
                     <div class="empty-cart">
                         <div class="empty-cart-icon">
                             <i class="bi bi-cart-x"></i>
@@ -432,17 +418,15 @@
                         <a href="index.html" class="btn btn-primary mt-3">Continue Shopping</a>
                     </div>
                 `;
-                return;
-            }
+                    return;
+                }
 
-            // Clear container
-            cartItemsContainer.innerHTML = '';
+                cartItemsContainer.innerHTML = '';
 
-            // Add each cart item
-            cart.forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.className = 'card mb-3';
-                itemElement.innerHTML = `
+                cart.forEach(item => {
+                    const itemElement = document.createElement('div');
+                    itemElement.className = 'card mb-3';
+                    itemElement.innerHTML = `
                     <div class="card-body">
                         <div class="row">
                             <div class="col-md-3 d-flex align-items-center">
@@ -465,135 +449,114 @@
                     </div>
                 `;
 
-                // Add event listeners for quantity controls
-                const incrementBtn = itemElement.querySelector('.increment');
-                const decrementBtn = itemElement.querySelector('.decrement');
-                const removeBtn = itemElement.querySelector('.remove-item');
-                const quantityDisplay = itemElement.querySelector('.quantity-display');
+                    const incrementBtn = itemElement.querySelector('.increment');
+                    const decrementBtn = itemElement.querySelector('.decrement');
+                    const removeBtn = itemElement.querySelector('.remove-item');
+                    const quantityDisplay = itemElement.querySelector('.quantity-display');
 
-                incrementBtn.addEventListener('click', () => {
-                    item.quantity += 1;
-                    localStorage.setItem('cart', JSON.stringify(cart));
-                    quantityDisplay.textContent = item.quantity;
-                    updateCartSummary();
-                    updateCartCounter();
-                    renderCartItems(); // Re-render to update item totals
-                });
-
-                decrementBtn.addEventListener('click', () => {
-                    if (item.quantity > 1) {
-                        item.quantity -= 1;
+                    incrementBtn.addEventListener('click', () => {
+                        item.quantity += 1;
                         localStorage.setItem('cart', JSON.stringify(cart));
                         quantityDisplay.textContent = item.quantity;
                         updateCartSummary();
                         updateCartCounter();
-                        renderCartItems(); // Re-render to update item totals
-                    } else {
+                        renderCartItems();
+                    });
+
+                    decrementBtn.addEventListener('click', () => {
+                        if (item.quantity > 1) {
+                            item.quantity -= 1;
+                            localStorage.setItem('cart', JSON.stringify(cart));
+                            quantityDisplay.textContent = item.quantity;
+                            updateCartSummary();
+                            updateCartCounter();
+                            renderCartItems();
+                        } else {
+                            removeItemFromCart(item.id);
+                        }
+                    });
+
+                    removeBtn.addEventListener('click', () => {
                         removeItemFromCart(item.id);
+                    });
+
+                    cartItemsContainer.appendChild(itemElement);
+                });
+            }
+
+            /**
+             * Removes an item from the cart
+             * @param {string} itemId - The ID of the item to remove
+             */
+            function removeItemFromCart(itemId) {
+                cart = cart.filter(item => item.id !== itemId);
+                localStorage.setItem('cart', JSON.stringify(cart));
+                renderCartItems();
+                updateCartSummary();
+                updateCartCounter();
+            }
+
+
+            function updateCartSummary() {
+                const subtotal = cart.reduce((sum, item) => {
+                    return preciseAdd(sum, preciseMultiply(item.price, item.quantity));
+                }, 0);
+
+                const shipping = subtotal > 500 ? 0 : (subtotal > 0 ? 50 : 0);
+
+                const tax = parseFloat((Math.round(subtotal * 0.18 * 100) / 100).toFixed(2));
+
+                const total = preciseAdd(preciseAdd(subtotal, shipping), tax);
+
+                subtotalElement.textContent = formatCurrency(subtotal);
+                shippingElement.textContent = shipping === 0 ? 'FREE' : formatCurrency(shipping);
+                taxElement.textContent = formatCurrency(tax);
+                totalElement.textContent = formatCurrency(total);
+
+                checkoutBtn.disabled = cart.length === 0;
+            }
+
+            function updateCartCounter() {
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCountElements.forEach(el => {
+                    el.textContent = totalItems;
+                });
+
+                if (cartCountDisplay) {
+                    cartCountDisplay.innerHTML = `<span class="cart-count">${totalItems}</span> ${totalItems === 1 ? 'item' : 'items'}`;
+                }
+            }
+
+            checkoutBtn.addEventListener('click', function () {
+                alert('Proceeding to checkout! This would redirect to a checkout page in a real implementation.');
+            });
+
+            const subscribeBtn = document.getElementById('subscribeBtn');
+            if (subscribeBtn) {
+                subscribeBtn.addEventListener('click', function () {
+                    const emailInput = document.getElementById('newsletterEmail');
+                    const messageElement = document.getElementById('subscribeMessage');
+
+                    if (emailInput.value && emailInput.value.includes('@')) {
+                        emailInput.value = '';
+                        showSubscriptionMessage(messageElement, 'Subscribed!', 'text-success');
+                    } else {
+                        showSubscriptionMessage(messageElement, 'Please enter a valid email', 'text-danger');
                     }
                 });
-
-                removeBtn.addEventListener('click', () => {
-                    removeItemFromCart(item.id);
-                });
-
-                cartItemsContainer.appendChild(itemElement);
-            });
-        }
-
-        /**
-         * Removes an item from the cart
-         * @param {string} itemId - The ID of the item to remove
-         */
-        function removeItemFromCart(itemId) {
-            cart = cart.filter(item => item.id !== itemId);
-            localStorage.setItem('cart', JSON.stringify(cart));
-            renderCartItems();
-            updateCartSummary();
-            updateCartCounter();
-        }
-
-        /**
-         * Updates the cart summary with totals
-         */
-        function updateCartSummary() {
-            // Calculate subtotal with precise arithmetic
-            const subtotal = cart.reduce((sum, item) => {
-                return preciseAdd(sum, preciseMultiply(item.price, item.quantity));
-            }, 0);
-            
-            // Calculate shipping (free for orders over 500, else 50)
-            const shipping = subtotal > 500 ? 0 : (subtotal > 0 ? 50 : 0);
-            
-            // Calculate tax (18%) with precise rounding
-            const tax = parseFloat((Math.round(subtotal * 0.18 * 100) / 100).toFixed(2));
-            
-            // Calculate total with precise addition
-            const total = preciseAdd(preciseAdd(subtotal, shipping), tax);
-
-            subtotalElement.textContent = formatCurrency(subtotal);
-            shippingElement.textContent = shipping === 0 ? 'FREE' : formatCurrency(shipping);
-            taxElement.textContent = formatCurrency(tax);
-            totalElement.textContent = formatCurrency(total);
-
-            // Enable/disable checkout button
-            checkoutBtn.disabled = cart.length === 0;
-        }
-
-        /**
-         * Updates the cart counter in the header
-         */
-        function updateCartCounter() {
-            const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-            cartCountElements.forEach(el => {
-                el.textContent = totalItems;
-            });
-
-            if (cartCountDisplay) {
-                cartCountDisplay.innerHTML = `<span class="cart-count">${totalItems}</span> ${totalItems === 1 ? 'item' : 'items'}`;
             }
-        }
 
-        /**
-         * Handles checkout button click
-         */
-        checkoutBtn.addEventListener('click', function () {
-            // In a real implementation, this would redirect to checkout
-            alert('Proceeding to checkout! This would redirect to a checkout page in a real implementation.');
+            function showSubscriptionMessage(element, message, className) {
+                element.textContent = message;
+                element.className = className;
+                element.style.display = 'block';
+
+                setTimeout(() => {
+                    element.style.display = 'none';
+                }, 3000);
+            }
         });
-
-        /**
-         * Newsletter subscription handler
-         */
-        const subscribeBtn = document.getElementById('subscribeBtn');
-        if (subscribeBtn) {
-            subscribeBtn.addEventListener('click', function () {
-                const emailInput = document.getElementById('newsletterEmail');
-                const messageElement = document.getElementById('subscribeMessage');
-
-                if (emailInput.value && emailInput.value.includes('@')) {
-                    emailInput.value = '';
-                    showSubscriptionMessage(messageElement, 'Subscribed!', 'text-success');
-                } else {
-                    showSubscriptionMessage(messageElement, 'Please enter a valid email', 'text-danger');
-                }
-            });
-        }
-
-        /**
-         * Shows a temporary subscription message
-         */
-        function showSubscriptionMessage(element, message, className) {
-            element.textContent = message;
-            element.className = className;
-            element.style.display = 'block';
-
-            setTimeout(() => {
-                element.style.display = 'none';
-            }, 3000);
-        }
-    });
-</script>
+    </script>
 
 </body>
 
