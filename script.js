@@ -513,7 +513,7 @@ document.addEventListener('DOMContentLoaded', function () {
             element.style.display = 'none';
         }, 3000);
     }
-    const shippingPolicyModal = new bootstrap.Modal('#shippingPolicyModal');
+    // const shippingPolicyModal = new bootstrap.Modal('#shippingPolicyModal');
     // Return Process Modal
     const returnModal = new bootstrap.Modal('#returnProcessModal');
 
