@@ -513,39 +513,4 @@ document.addEventListener('DOMContentLoaded', function () {
             element.style.display = 'none';
         }, 3000);
     }
-    // const shippingPolicyModal = new bootstrap.Modal('#shippingPolicyModal');
-    // Return Process Modal
-    const returnModal = new bootstrap.Modal('#returnProcessModal');
-
-    // Trigger modal from "Start Return Process" buttons
-    document.querySelectorAll('.start-return-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            returnModal.show();
-
-            // Reset steps to first step when modal opens
-            document.querySelectorAll('.return-steps .step').forEach((step, index) => {
-                step.classList.toggle('active', index === 0);
-            });
-        });
-    });
-
-    // Next step button functionality
-    document.getElementById('startReturnBtn').addEventListener('click', function () {
-        const activeStep = document.querySelector('.return-steps .step.active');
-        const nextStep = activeStep.nextElementSibling;
-
-        if (nextStep) {
-            activeStep.classList.remove('active');
-            nextStep.classList.add('active');
-
-            // Update button text if last step
-            if (!nextStep.nextElementSibling) {
-                this.innerHTML = 'Print Return Label <i class="bi bi-printer ms-2"></i>';
-            }
-        } else {
-            // Final step action would go here
-            alert('Return process completed! (This would redirect to label printing in real implementation)');
-            returnModal.hide();
-        }
-    });
 });
