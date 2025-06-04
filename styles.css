@@ -47,12 +47,9 @@ body {
   box-shadow: var(--shadow-hover);
   padding: 0.5rem 0;
   margin-top: 0;
-  /* Remove gap */
   display: none;
-  /* Start hidden */
 }
 
-/* Show on hover */
 .navbar .dropdown:hover .dropdown-menu,
 .navbar .dropdown-menu:hover {
   display: block;
@@ -108,7 +105,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   min-height: 400px;
-  /* Adjust height as needed */
 }
 
 .hero-img-container {
@@ -138,7 +134,6 @@ body {
   justify-content: center;
   align-items: center;
   background: rgba(0, 0, 0, 0.4);
-  /* Lighter overlay for better text visibility */
   color: white;
   padding: 20px;
   text-align: center;
@@ -164,7 +159,6 @@ body {
 
 .category-deal-img-container {
   height: 200px;
-  /* Fixed height for all images */
   overflow: hidden;
 }
 
@@ -384,10 +378,6 @@ body {
   background: #f8f9fa;
   padding: 1rem;
 }
-
-/* ======================
-   HELP CENTER STYLES 
-   ====================== */
 
 /* Base Styles */
 .help-center-container {
@@ -952,7 +942,6 @@ body {
     margin-right: 0 !important;
   }
 
-  /* Adjust product card image height on mobile */
   .product-card img {
     height: 150px;
   }
